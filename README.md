@@ -1,24 +1,42 @@
-# Observations
+# Blog ReactJS Test Project
 
-All the business rules and logics tend to be in the templates to facilitate reusability of components
+## Observations
 
-# Getting Started with Create React App
+All the business rules and logics tend to be in the /src/templates folder to facilitate reusability of components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- **Responsive Design**: Works seamlessly across devices.
+- **Component-Based Architecture**: Modular and reusable React components.
+- **State Management**: Utilizes [React Context API] to efficiently manage filters states.
+- **Integration with APIs**: Fetches data dynamically from external services.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone [repository-url]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+
+   ```
+
+3. Run the application locally:
+   ```bash
+   npm start
+   ```
+
+## Screenshots
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- Email: [contato@wolker.com.br]
+- LinkedIn: [https://www.linkedin.com/in/wolker-wegner-7aab6821/]
