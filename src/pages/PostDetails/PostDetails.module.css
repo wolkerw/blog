@@ -1,0 +1,37 @@
+h2 {
+  font-size: 1.75rem !important;
+  margin: 20px 0 0 0;
+}
+
+.postInfo {
+  display: flex;
+  margin-top: 12px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    margin-right: 9px;
+  }
+
+  small {
+    color: #000;
+    line-height: 130%;
+    padding-top: 3px;
+
+    span {
+      color: var(--neutrals-extra-dark);
+    }
+  }
+}
+
+.thumbnailImage {
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+hr {
+  border-color: var(--neutrals-extra-light);
+  margin-top: 20px;
+}

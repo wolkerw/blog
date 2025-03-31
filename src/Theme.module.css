@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --neutrals-lightest: #f0f0f2;
+  --neutrals-extra-light: #e0e2e6;
+  --neutrals-extra-dark: #5e5f63;
+  --primary-dark: #020318;
+  --secondary-medium: #d31450;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+small {
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 130%;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 130%;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 130%;
+}
+
+.Blog {
+  min-height: 100vh;
+  color: var(--primary-dark);
+  font-size: 16px;
+  line-height: 150%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #00bfc1 0%,
+    rgba(240, 240, 242, 0) 100%
+  );
+}
+
+.alignContent {
+  width: 343px;
+  margin: 16px auto 0 auto;
+}

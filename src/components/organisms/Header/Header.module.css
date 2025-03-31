@@ -1,0 +1,12 @@
+header {
+  width: calc(100vw -20px);
+  border-bottom: 1px solid var(--neutrals-extra-light);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+  .logo {
+    cursor: pointer;
+    margin-top: 4px;
+  }
+}
