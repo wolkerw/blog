@@ -34,6 +34,13 @@ All the business rules and logics tend to be in the /src/templates folder to fac
 
 ## Screenshots
 
+1
+![Alt text](/src/assets/prints/home.jpg "Title")
+2
+![Alt text](/src/assets/prints/home.jpg?raw=true "Title")
+3
+![plot](/src/assets/prints/home.jpg)
+
 ## Contact
 
 If you have any questions or feedback, feel free to reach out:
