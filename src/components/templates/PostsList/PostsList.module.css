@@ -1,0 +1,11 @@
+.postsList {
+  width: calc(100vw -16px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px;
+}
+
+.noResultText {
+  text-align: center;
+}

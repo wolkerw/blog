@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: #f0f0f2;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -41,9 +42,4 @@ h3 {
     #00bfc1 0%,
     rgba(240, 240, 242, 0) 100%
   );
-}
-
-.alignContent {
-  width: 343px;
-  margin: 16px auto 0 auto;
 }

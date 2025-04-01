@@ -6,7 +6,6 @@ import { postsService } from "../../services/Posts";
 import { Button } from "../../components/atoms/Button";
 
 import styles from "./PostDetails.module.css";
-import theme from "../../Theme.module.css";
 
 export const PostDetails = () => {
   let { id } = useParams();
@@ -26,12 +25,14 @@ export const PostDetails = () => {
   }, []);
 
   return (
-    <div className={theme.alignContent}>
-      <Button leftIcon={<IoMdArrowBack />} handleClick={() => navigate("/")}>
-        Back
-      </Button>
+    <div className={styles.alignPostDetailsContent}>
+      <div className={styles.backButton}>
+        <Button leftIcon={<IoMdArrowBack />} handleClick={() => navigate("/")}>
+          Back
+        </Button>
+      </div>
       {post && (
-        <>
+        <div className={styles.postContent}>
           <h2>{post?.title}</h2>
 
           <div className={styles.postInfo}>
@@ -41,21 +42,27 @@ export const PostDetails = () => {
               alt="profilePicture"
             />
             <small>
-              Written by: <b>Dentusu</b>
+              Written by: <b>{post?.author?.name}</b>
               <br />
-              <span>Jan 20, 2024</span>
+              <span>
+                {new Date(post?.createdAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </span>
             </small>
           </div>
 
           <img
             className={styles.thumbnailImage}
             src={post.thumbnail_url}
-            width={343}
+            width="100%"
             alt="post-thumb"
           />
           <p>{post?.content}</p>
           <hr />
-        </>
+        </div>
       )}
       {/* TODO last articles */}
     </div>

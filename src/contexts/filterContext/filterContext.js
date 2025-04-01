@@ -16,7 +16,6 @@ const FilterProvider = ({ children }) => {
 
   const filterPosts = (posts) => {
     const filteredPosts = posts.filter((post) => {
-      console.log("post", post);
       if (
         !searchText ||
         post?.title?.toLowerCase()?.includes(searchText.toLowerCase()) ||

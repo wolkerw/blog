@@ -3,7 +3,7 @@
   height: 425px;
   border-radius: 16px;
   background-color: white;
-  margin: 8px auto;
+  margin: 16px;
   overflow: hidden;
   cursor: pointer;
 
@@ -16,8 +16,9 @@
 
   small {
     color: var(--neutrals-extra-dark);
-    display: block;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 4px 12px;
 
     .redDot {
       width: 5px;
@@ -25,22 +26,31 @@
       background-color: var(--secondary-medium);
       border-radius: 100%;
       display: inline-block;
-      margin: 0 6px;
+      margin: 1px 6px 0 6px;
     }
   }
 
   h3 {
-    padding: 8px;
+    padding: 6px 12px;
     margin: 0;
   }
 
   p {
     overflow: hidden;
-    padding: 8px 8px 0 8px;
+    padding: 8px 12px 0 12px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin: 0;
+  }
+
+  .categoryButtons {
+    text-align: center;
+    margin: 24px 0 0 12px;
+
+    button {
+      margin-right: 12px;
+    }
   }
 }

@@ -1,6 +1,24 @@
+.alignPostDetailsContent {
+  min-width: 343px;
+  max-width: calc(100vw - 64px);
+  margin: 16px auto 0 auto;
+  @media (width >= 650px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.backButton {
+  margin: 0 75px 16px 0;
+}
+
+.postContent {
+  max-width: 874px;
+}
+
 h2 {
   font-size: 1.75rem !important;
-  margin: 20px 0 0 0;
+  margin: 0;
 }
 
 .postInfo {
