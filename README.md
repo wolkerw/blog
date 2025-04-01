@@ -34,12 +34,11 @@ All the business rules and logics tend to be in the /src/templates folder to fac
 
 ## Screenshots
 
-1
-![Alt text](/src/assets/prints/home.jpg "Title")
-2
-![Alt text](/src/assets/prints/home.jpg?raw=true "Title")
-3
-![plot](/src/assets/prints/home.jpg)
+Home page:
+![Alt text](/src/assets/prints/home.jpg "Home")
+
+Post Details page:
+![Alt text](/src/assets/prints/postDetails.jpg "Post Details")
 
 ## Contact
 
