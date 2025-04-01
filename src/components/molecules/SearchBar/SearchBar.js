@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IoMdSearch } from "react-icons/io";
+
+import { FilterContext } from "../../../contexts/filterContext/filterContext";
 
 import styles from "./SearchBar.module.css";
 
 export const SearchBar = () => {
+  const { searchText, setSearchText, loadHomePosts } =
+    useContext(FilterContext);
   const [inputOpened, setInputOpened] = useState(false);
-  const [searchText, setSearchText] = useState();
 
   const handleClickSearchButton = () => {
     if (inputOpened) {
-      // TODO colocar searchText no contextapi e quando tiver valor, fazer a busca da página inicial considerando o texto
-      console.log("searchText", searchText);
+      loadHomePosts();
     }
     setInputOpened(!inputOpened);
   };

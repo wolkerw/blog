@@ -16,7 +16,7 @@ All the business rules and logics tend to be in the /src/templates folder to fac
 1. Clone the repository:
 
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/wolkerw/blog.git
 
    ```
 
@@ -38,5 +38,5 @@ All the business rules and logics tend to be in the /src/templates folder to fac
 
 If you have any questions or feedback, feel free to reach out:
 
-- Email: [contato@wolker.com.br]
-- LinkedIn: [https://www.linkedin.com/in/wolker-wegner-7aab6821/]
+- Email: contato@wolker.com.br
+- LinkedIn: https://www.linkedin.com/in/wolker-wegner-7aab6821/

@@ -16,10 +16,7 @@ export const PostDetails = () => {
 
   const loadPost = async () => {
     getPost(id)
-      .then((post) => {
-        console.log("post", post);
-        setPost(post);
-      })
+      .then((post) => setPost(post))
       .catch((e) => console.log("errors", e));
   };
 
