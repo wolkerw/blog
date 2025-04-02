@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
 import { IoMdSearch } from "react-icons/io";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { FilterContext } from "../../../contexts/filterContext/filterContext";
 

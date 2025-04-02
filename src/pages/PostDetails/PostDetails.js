@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router";
 import { IoMdArrowBack } from "react-icons/io";
 
 import { postsService } from "../../services/Posts";

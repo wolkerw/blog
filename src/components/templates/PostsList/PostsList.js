@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 import { PostCard } from "../../organisms/PostCard";
 import { FilterContext } from "../../../contexts/filterContext/filterContext";

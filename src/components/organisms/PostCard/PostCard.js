@@ -5,8 +5,6 @@ import { Button } from "../../atoms/Button/Button";
 import styles from "./PostCard.module.css";
 
 export const PostCard = ({ post }) => {
-  console.log("post", post);
-
   return (
     <div className={styles.postCard}>
       <img src={post.thumbnail_url} heigth={196} alt="post-thumb" />
