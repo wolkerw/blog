@@ -1,13 +1,19 @@
-import React from "react";
+import "@testing-library/jest-dom";
+import React, { FC } from "react";
 
 import { Button } from "../../atoms/Button/Button";
+import { IPost } from "../../../interfaces/Post";
 
 import styles from "./PostCard.module.css";
 
-export const PostCard = ({ post }) => {
+interface PostCardProps {
+  post: IPost;
+}
+
+export const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
     <div className={styles.postCard}>
-      <img src={post.thumbnail_url} heigth={196} alt="post-thumb" />
+      <img src={post.thumbnail_url} height={196} alt="post-thumb" />
       <small>
         {new Date(post?.createdAt).toLocaleDateString("en-US", {
           year: "numeric",
@@ -19,9 +25,9 @@ export const PostCard = ({ post }) => {
       <h3>{post.title}</h3>
       <p>{post.content}</p>
 
-      {post.categories?.length > 0 && (
+      {post.categories && post.categories?.length > 0 && (
         <div className={styles.categoryButtons}>
-          {post.categories.map((category) => {
+          {post.categories?.map((category) => {
             return (
               <Button
                 handleClick={() => alert("To be developed...")}

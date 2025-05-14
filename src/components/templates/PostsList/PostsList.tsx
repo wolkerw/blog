@@ -3,25 +3,26 @@ import { useNavigate } from "react-router";
 
 import { PostCard } from "../../organisms/PostCard";
 import { FilterContext } from "../../../contexts/filterContext/filterContext";
+import { IPost } from "../../../interfaces/Post";
 
 import styles from "./PostsList.module.css";
 
 export const PostsList = () => {
   const navigate = useNavigate();
-  const { loadHomePosts, posts } = useContext(FilterContext);
+  const filterContext = useContext(FilterContext);
 
   useEffect(() => {
-    loadHomePosts();
+    filterContext?.loadHomePosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className={styles.postsList}>
-      {!posts?.length && (
+      {!filterContext?.posts?.length && (
         <h3 className={styles.noResultText}>No results found.</h3>
       )}
 
-      {posts?.map((post) => (
+      {filterContext?.posts?.map((post: IPost) => (
         <div onClick={() => navigate(`/post/${post.id}`)}>
           <PostCard post={post} />
         </div>

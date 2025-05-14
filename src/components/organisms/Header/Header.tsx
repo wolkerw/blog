@@ -1,8 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-import { SearchBar } from "../../molecules/SearchBar";
-
 import styles from "./Header.module.css";
 
 import logo from "../../../assets/images/logo.png";
@@ -16,11 +14,16 @@ export const Header = () => {
         src={logo}
         className={styles.logo}
         alt="logo"
-        heigth={24}
-        width={204}
+        height={51}
+        width={200}
+        style={{
+          overflow: "hidden",
+          objectFit: "cover",
+          height: "51px",
+          margin: "0 auto",
+        }}
         onClick={() => navigate("/")}
       />
-      <SearchBar />
     </header>
   );
 };

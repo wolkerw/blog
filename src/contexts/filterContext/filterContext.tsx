@@ -1,20 +1,39 @@
-import { createContext, useState } from "react";
+import React, {
+  createContext,
+  FC,
+  ReactNode,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 import { postsService } from "../../services/Posts";
+import { IPost } from "../../interfaces/Post";
 
-const FilterContext = createContext({
+interface IFilterContext {
+  searchText?: string;
+  setSearchText: Dispatch<SetStateAction<string>>;
+  loadHomePosts: () => void;
+  posts: IPost[];
+}
+
+const FilterContext = createContext<IFilterContext | undefined>({
   searchText: "",
   setSearchText: () => "",
   loadHomePosts: async () => {},
   posts: [],
 });
 
-const FilterProvider = ({ children }) => {
-  const [searchText, setSearchText] = useState();
-  const [posts, setPosts] = useState();
+interface IFilterProvider {
+  children: ReactNode;
+}
+
+const FilterProvider: FC<IFilterProvider> = ({ children }) => {
+  const [searchText, setSearchText] = useState<string>("");
+  const [posts, setPosts] = useState<IPost[]>([]);
   const { getAll } = postsService;
 
-  const filterPosts = (posts) => {
+  const filterPosts = (posts: IPost[]) => {
     const filteredPosts = posts.filter((post) => {
       if (
         !searchText ||

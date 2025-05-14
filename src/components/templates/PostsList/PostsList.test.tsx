@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
 
 import { PostsList } from "./PostsList";
@@ -8,7 +9,16 @@ jest.mock("react-router", () => ({
   useNavigate: () => mockedUsedNavigate,
 }));
 
-const mockPosts = [{ title: "Title", author: { name: "Author Name" } }];
+const mockPosts = [
+  {
+    id: "1",
+    title: "Test",
+    author: { name: "Author Name", profilePicture: "google.com" },
+    createdAt: "2025-05-13T13:35:34.000Z",
+    thumbnail_url: "",
+    content: "Content",
+  },
+];
 const mockLoadHomePosts = async () => mockPosts;
 
 describe("PostsList component", () => {
@@ -22,13 +32,17 @@ describe("PostsList component", () => {
   it("should show a list with a post", () => {
     render(
       <FilterContext
-        value={{ loadHomePosts: mockLoadHomePosts, posts: mockPosts }}
+        value={{
+          loadHomePosts: mockLoadHomePosts,
+          posts: mockPosts,
+          setSearchText: () => null,
+        }}
       >
         <PostsList />
       </FilterContext>
     );
 
-    const title = screen.getByText(/Title/i);
+    const title = screen.getByText(/Test/i);
     expect(title).toBeInTheDocument();
   });
 });

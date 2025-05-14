@@ -1,3 +1,5 @@
+import React from "react";
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
 import { PostCard } from "./PostCard";
@@ -8,19 +10,24 @@ jest.mock("react-router", () => ({
 }));
 
 const mockPost = {
-  title: "Title",
-  author: { name: "Author Name" },
-  thumbnail_url: "test",
+  id: "1",
+  title: "Test",
+  author: { name: "Author Name", profilePicture: "google.com" },
+  createdAt: "2025-05-13T13:35:34.000Z",
+  thumbnail_url: "",
+  content: "Content",
 };
 
 describe("PostCard component", () => {
   it("should show a post card with info", () => {
     render(<PostCard post={mockPost} />);
 
-    const thumbnailImage = screen.getByRole("img", { name: "post-thumb" });
+    const thumbnailImage: HTMLElement = screen.getByRole("img", {
+      name: "post-thumb",
+    });
     expect(thumbnailImage).toBeInTheDocument();
 
-    const title = screen.getByText(/Title/i);
+    const title = screen.getByText(/Test/i);
     expect(title).toBeInTheDocument();
   });
 });
