@@ -1,4 +1,3 @@
-import "@testing-library/jest-dom";
 import React, { FC } from "react";
 
 import { Button } from "../../atoms/Button/Button";
